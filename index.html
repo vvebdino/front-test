@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
+    <title>Хлебомолы</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top container flex">
+            <div class="">
+                <ul class="header-top__list flex">
+                    <li><a href="#" class="header-top__list__link">О магазине</a></li>                           
+                    <li><a href="#" class="header-top__list__link">Доставка и самовывоз</a></li>
+                    <li><a href="#" class="header-top__list__link">Оплата</a></li>
+                    <li><a href="#" class="header-top__list__link">Контакты</a></li>
+                    <li><a href="#" class="header-top__list__link">Блог</a></li>
+                </ul>
+            </div>
+            <div class="header-top__user flex">
+                <div class="header-top__user__item">
+                    <img src="img/loc.png" alt="icon: location" class="header-top__user__item__img">
+                    <span class="header-top__user__item__span">Город:</span>
+                    <a href="#" class="header-top__user__item__link">Москва</a>
+                </div>
+                <div class="header-top__user__item">
+                    <img src="img/user.png" alt="icon: user"  class="header-top__user__item__img">
+                    <a href="#" class="header-top__user__item__link">Личный кабинет</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-info container flex">
+            <div class="header-info__logo">
+                <img src="img/logo.png" alt="icon: header-logo">
+            </div>
+            <div>
+                <form action="#" method="get" class="header-info__form">
+                    <button class="header-info__form__btn">
+                        <img src="img/search.png" alt="icon: search-button">
+                    </button>
+                    <input type="search" placeholder="Найти что-нибудь" class="header-info__form__input">
+                </form>
+            </div>
+            <div class="header-info-wrap">
+                <a href="tel: +78005553386" class="header-info__phone">+7 800 555-33-86</a>
+                <a href="#" class="header-info__callback">Обратный звонок</a>
+            </div>
+        </div>
+        <div class="header-menu container flex">
+            <div>
+                <ul class="header-menu__list flex">
+                    <li><a href="#" class="header-menu__list__link">Мельницы</a></li>                                 
+                    <li><a href="#" class="header-menu__list__link">Техника</a></li>
+                    <li><a href="#" class="header-menu__list__link">Для выпечки</a></li>
+                    <li><a href="#" class="header-menu__list__link">Посуда</a></li>
+                    <li><a href="#" class="header-menu__list__link">Проращиватели</a></li>
+                    <li><a href="#" class="header-menu__list__link">Детям</a></li>
+                    <li><a href="#" class="header-menu__list__link">Чай из Непала</a></li>
+                </ul>
+            </div>
+            <div>
+                <a class="header-menu__cart">
+                    <img src="img/cart.png" alt="icon: cart">
+                    <span class="header-menu__cart__count">2</span>
+                </a>
+                <span class="header-menu__cart__sum total"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="ordering">
+        <div class="container flex">
+            <div class="ordering__select">
+                <form action="#" method="POST">
+                    <span class="ordering-title">Оформление заказа</span>
+                    <div class="ordering__select__face-selection flex">
+                        <button type="button" class="ordering__select__face-selection__btn"><span class="ordering__select__face-selection__btn-active-dotted">Физическое лицо</span></button>
+                        <button type="button" class="ordering__select__face-selection__btn active"><span class="ordering__select__face-selection__btn-active-dotted">Юридическое лицо</span></button>
+                    </div>
+                    <span class="ordering__select__contacts__title">Контактные данные</span>
+                    <div class="ordering__select__contacts flex">
+                        <div>
+                            <span class="ordering__select__contacts-common">Имя</span>
+                            <input type="name" required placeholder="Александр" class="ordering__select__contacts__input" pattern="[а-яёА-ЯЁ\-]+">
+                            <div class="ordering__select__contacts-wrap">
+                                <span class="ordering__select__contacts-common">Эл.почта</span>
+                                <input type="text" class="ordering__select__contacts__input input-email">
+                                <small class="small">Недопустимые символы. Это поле  <br>может содержать только латиницу</small>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="ordering__select__contacts-common">Фамилия</span>
+                            <input type="text" required placeholder="Пушкин" class="ordering__select__contacts__input" pattern="[а-яёА-ЯЁ\-]+">
+                            <div class="ordering__select__contacts-wrap">
+                                <span class="ordering__select__contacts-common">Номер телефона</span>
+                                <div class="flex">
+                                    <div class="ordering__select__contacts__num">+7</div>
+                                    <input type="tel" required placeholder="999 432 34-21" id="phone" minlength="10" maxlength="13" class="ordering__select__contacts__input ordering__select__contacts__input-phone input-phone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="ordering__select__address__title">Адрес и способ доставки</span>
+                    <div class="ordering__select__address flex">
+                        <div>
+                            <span class="ordering__select__contacts-common">Страна</span>
+                            <label class="ordering__select__address__label">
+                                <select class="ordering__select__address__select">
+                                    <option>Россия</option>
+                                    <option>Украина</option>
+                                    <option>Хорватия</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <span class="ordering__select__contacts-common">Город</span>
+                            <input type="text" placeholder="Москва" class="ordering__select__address__input">
+                        </div>
+                    </div>
+                    <div class="ordering__select__delivery">
+                        <span class="ordering__select__delivery__title">Способ доставки</span>
+                        <div class="ordering__select__delivery__radio">
+                            <input class="ordering__select__delivery__custom-radio" type="radio" id="delivery-1" name="delivery-method" id="courier" value="courier">
+                            <label for="delivery-1">
+                                <div>
+                                    <span class="ordering__select__delivery__sum">Доставка курьерской службой — 710 ₽</span>
+                                    <span class="ordering__select__delivery__time">(Срок доставки — 1–3 дня)</span>
+                                </div>
+                            </label>
+                            
+                        </div>
+
+                        <div class="ordering__select__delivery__radio">
+                            <input class="ordering__select__delivery__custom-radio" type="radio" id="delivery-2" name="delivery-method" id="transport-company" value="transport-company">
+                            <label for="delivery-2">
+                                <div>
+                                    <span class="ordering__select__delivery__sum">Доставка транспортной компанией — 210 ₽</span>
+                                    <span class="ordering__select__delivery__time ordering__select__delivery__time-width">(Данный вид доставки возможен при полной предоплате заказа. Срок доставки — 3-5 дней)</span>
+                                </div>
+                            </label>
+                            
+                        </div>
+
+                        <div class="ordering__select__delivery__radio pickup active">
+                            <input class="ordering__select__delivery__custom-radio" checked type="radio" id="delivery-3" name="delivery-method" id="pickup" value="pickup">
+                            <label for="delivery-3">
+                                <div>
+                                    <span class="ordering__select__delivery__sum">Самовывоз — 180 ₽</span>
+                                    <span class="ordering__select__delivery__time">Доставка до пункта самовывоза займет 2–3 дня</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ordering__select__point">
+                        <span class="ordering__select__point__title">Пункт самовывоза</span>
+                        <span class="ordering__select__contacts-common">Станция метро</span>
+                        <label class="ordering__select__point__label">
+                            <select class="ordering__select__point__select">
+                                <option class="point-kuznec">Кузнецкий мост</option>
+                                <option class="point-sokol">Сокольники</option>
+                            </select>
+                        </label>
+                            <div class="ordering__select__point__map ordering__select__point__map-1 active">
+                                <span class="ordering__select__point__map__address">Ул. Кузнецкий мост, 9/10 стр.2, офис 204 <br>Ежедневно с 12:00 до 22:00</span>
+                            </div>
+                            <div class="ordering__select__point__map ordering__select__point__map-2">
+                                <span class="ordering__select__point__map__address ordering__select__point__map__address-2">2-я Сокольническая улица, 6 стр.2 <br>Ежедневно с 12:00 до 22:00</span>
+                            </div>
+                    </div>
+                    <div class="ordering__select__comment">
+                        <span class="ordering__select__comment__title">Комментарий к заказу</span>
+                        <textarea cols="51" rows="12" class="ordering__select__comment__field textarea"></textarea>
+                    <button type="submit" class="ordering__select__comment__btn">К выбору способа оплаты</button>
+                    </div>
+                </form>
+            </div>
+            <div class="ordering__check">
+                <span class="ordering__check__title">Ваш заказ</span>
+                <ul class="ordering__check__list">
+                    <li class="ordering__check__list__good">
+                        <a href="#" class="ordering__check__name-common ordering__check__list__item">Мельница ручная Kornkraft</a>
+                        <span class="ordering__check__price-common ordering__check__list__price" >18 990 ₽</span>
+                        <span class="ordering__check__name-common ordering__check__list__item">Mia aMola</span>
+                    </li>
+                    <li class="ordering__check__list__good">
+                        <a href="#" class="ordering__check__name-common ordering__check__list__item">Пшеница БИО, 1 кг (Россия)</a>
+                        <span class="ordering__check__price-common ordering__check__list__price">420 ₽</span>
+                        <span class="ordering__check__name-common ordering__check__list__item">(2 шт)</span>
+                    </li>
+                </ul>
+                <div class="ordering__check__payment">
+                    <span class="ordering__check__name-common ordering__check__payment__name">Размер скидки (5%)</span>
+                    <span class="ordering__check__price-common">420 ₽</span>
+                    <span class="ordering__check__name-common ordering__check__payment__name">Итого</span>
+                    <span class="ordering__check__price-common">18 344 ₽</span>
+                    <span class="ordering__check__name-common ordering__check__payment__name delivery-method" style="margin-bottom: 0;"></span>
+                    <span class="ordering__check__price-common delivery-price"></span>
+                </div>
+                <div class="ordering__check__total">
+                    <span class="ordering__check__total__name">Сумма с доставкой</span>
+                    <span class="ordering__check__total__price total"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container flex">
+            <div>
+                <span class="footer-title">Каталог</span>
+                <div class="footer__cat flex">
+                    <div>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link footer-list-common">Мельницы</a></li>    
+                            <li><a href="#" class="footer-list__link footer-list-common">Техника</a></li>
+                            <li><a href="#" class="footer-list__link footer-list-common">Для выпечки</a></li>
+                            <li><a href="#" class="footer-list__link footer-list-common">Посуда</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="footer-list footer__cat__list">
+                            <li><a href="#" class="footer-list__link footer-list-common">Проращиватели</a></li>
+                            <li><a href="#" class="footer-list__link footer-list-common">Детям</a></li>
+                            <li><a href="#" class="footer-list__link footer-list-common">Чай из Непала</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info">
+                <span class="footer-title">Информация</span>
+                <ul class="footer-list">
+                    <li><a href="#" class="footer-list__link footer-list-common">Доставка и самовывоз</a></li>    
+                    <li><a href="#" class="footer-list__link footer-list-common">О магазине</a></li>
+                    <li><a href="#" class="footer-list__link footer-list-common">10 причин покупать у нас</a></li>
+                    <li><a href="#" class="footer-list__link footer-list-common">Оплата</a></li>
+                    <li><a href="#" class="footer-list__link footer-list-common">Мастер-классы</a></li>
+                    <li><a href="#" class="footer-list__link footer-list-common">Блог</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <span class="footer-title">Контакты</span>
+                <ul class="footer-list">
+                    <li class="footer-list-common footer__contacts__item">+7 (495) 789 41 43 — Москва</li>    
+                    <li class="footer-list-common footer__contacts__item">+7 (812) 385 55 86 — Санкт-Петербург</li>
+                    <li class="footer-list-common footer__contacts__item">+7 (800) 555 33 86 — Вся Россия</li>
+                    <li><a href="#" class="footer-list__link footer-list-common">Обратная связь</a></li>
+                    <li><a href="#" class="footer-list__link footer-list-common">info@hlebomoli.ru</a></li>
+                </ul>
+            </div>
+            <div class="footer__club">
+                <span class="footer-title">Вступайте в клуб</span>
+                <p class="footer__club__text">Подпишитесь на наши новости и будьте в курсе всех акций, скидок и новых поступлений, а также самых изысканных рецептов.</p>
+                <form action="#" method="post" class="footer__club__form flex">
+                    <input type="text" placeholder="Ваша эл. почта" class="footer__club__form__input input-email">
+                    <button class="footer__club__form__btn"></button>
+                </form>
+                <small class="small">Недопустимые символы. Это поле  <br>может содержать только латиницу</small>
+            </div>
+        </div>
+        <div class="footer-bottom container flex">
+            <div class="footer__copy">Хлебомолы © 2014–2015</div>
+            <div class="footer__social">
+                <ul class="footer-list flex">
+                    <li>
+                        <a href="#" class="footer__social__link">
+                            <img src="img/vk.png" alt="social-icon: vk">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__social__link">
+                            <img src="img/facebook.png" alt="social-icon: facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__social__link">
+                            <img src="img/insta.png" alt="social-icon: insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__social__link">
+                            <img src="img/youtube.png" alt="social-icon: youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="pickup-map">
+            <button type="button" class="close">&#10006;</button>
+            <div style="position:relative;overflow:hidden;"><iframe src="https://yandex.ru/map-widget/v1/-/CCUeINgmcD" width="900" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>
+    </div>
+
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>
